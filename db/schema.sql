@@ -15,3 +15,14 @@ CREATE TABLE gambler_profile (
     total_winnings DOUBLE DEFAULT 0,
     is_active BOOLEAN DEFAULT TRUE
 );
+
+CREATE TABLE stake_transaction (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    gambler_id INT,
+    transaction_type VARCHAR(50),
+    amount DOUBLE,
+    balance_after DOUBLE,
+    bet_id VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (gambler_id) REFERENCES gambler_profile(id)
+);
