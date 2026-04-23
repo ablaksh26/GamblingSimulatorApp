@@ -1,7 +1,7 @@
 import time
-from app.models.session_enums import SessionStatus, SessionEndReason
-from app.models.game_record import GameRecord
-from app.models.pause_record import PauseRecord
+from models.session_enums import SessionStatus, SessionEndReason
+from models.game_record import GameRecord
+from models.pause_record import PauseRecord
 
 
 class GamingSession:

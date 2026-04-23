@@ -1,4 +1,4 @@
-from app.models.gaming_session import GamingSession
+from models.gaming_session import GamingSession
 
 class GameSessionManager:
 
