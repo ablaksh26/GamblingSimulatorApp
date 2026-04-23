@@ -12,3 +12,5 @@ def get_connection():
         database=os.getenv("DB_NAME"),
         port=int(os.getenv("DB_PORT", 3306))
     )
+
+

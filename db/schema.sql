@@ -26,3 +26,15 @@ CREATE TABLE stake_transaction (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (gambler_id) REFERENCES gambler_profile(id)
 );
+
+CREATE TABLE bet (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    gambler_id INT,
+    amount DOUBLE,
+    win_probability DOUBLE,
+    outcome VARCHAR(10),
+    stake_before DOUBLE,
+    stake_after DOUBLE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (gambler_id) REFERENCES gambler_profile(id)
+);
